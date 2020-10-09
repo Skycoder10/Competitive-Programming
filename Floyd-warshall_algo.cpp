@@ -1,4 +1,5 @@
-//
+//AUTHOR: phoenix_0010
+//JALPAIGURI GOVERNMENT ENGINEERING COLLEGE
 
 
 
@@ -28,29 +29,6 @@ using namespace std;
 
 typedef long double ld;
 typedef long long int ll;
-
-
-//getline(cin,string);
-const ll inf = (ll) 1e18 + 19;
-const ll mod = (ll) 1e9  +  7;
-
-
-
-
-ll ncr(ll n,ll r) {
-    ll val=1,i,j,p=2;
-    rfr(i,n-r+1,n+1) {
-        val*=i;
-        while(val%p==0 && p<=r) {
-            val/=p;
-            p+=1;
-        }
-    }
-    if(p<r) {
-        fr(i,p,r+1) val/=i;
-    }
-    return val;
-}
 
 
 
