@@ -10,7 +10,7 @@ void solve(){
     cin>>n>>m;
     std::vector<pair<int,int>>adj[n+1];
     for (int i = 0; i < m; i++) {
-        int a,b;
+        int a,b,w;
         cin>>a>>b>>w;
         adj[a].push_back({b,w});
         adj[b].push_back({a,w});
@@ -34,8 +34,10 @@ void solve(){
             }
         }
     }
+    bool f=0;
     for(int i:distance){
-        cout<<i<<" ";
+        if(f) cout<<i<<" ";
+        f=1;
     }
 }
  
@@ -44,7 +46,7 @@ void solve(){
 int main() {
     ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     int T=1;
-    cin >>T;
+    //cin >>T;
     while(T--){
         solve();
     }
